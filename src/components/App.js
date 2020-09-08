@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ContactForm from './ContactForm/ContactForm';
 import ContactsList from './ContactList/ContactList';
 import Filter from './Filter/Filter';
+import styles from './App.module.css';
 
 class App extends Component {
   state = {
@@ -46,7 +47,7 @@ class App extends Component {
     );
 
     return (
-      <div>
+      <div className={styles.container}>
         <h1>Phonebook</h1>
         <ContactForm onAddContact={this.addContact}></ContactForm>
         <h2>Contacts</h2>
